@@ -1,0 +1,978 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrige tes cours - Cours de soutien scolaire au Cameroun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="./photo/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .teacher-card:hover {
+            transform: scale(1.03);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="./photo/logo.jpg" alt="" class="rounded-full w-10 h-10 object-cover">
+                        <!-- <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-2"></i> -->
+                        <span class="text-xl font-bold text-blue-600">Corrige <span class="text-orange-600">tes</span> cours</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#accueil" class="text-blue-600 hover:text-blue-800 px-3 py-2 font-medium">Accueil</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Nos Services</a>
+                    <a href="#methodes" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Méthodes</a>
+                    <a href="#enseignants" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Enseignants</a>
+                    <a href="#tarifs" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Tarifs</a>
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+                <a href="#accueil" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Accueil</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Nos Services</a>
+                <a href="#methodes" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Méthodes</a>
+                <a href="#enseignants" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Enseignants</a>
+                <a href="#tarifs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Tarifs</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Excellence Académique au Cameroun</h1>
+                    <p class="text-xl mb-8">Des cours de répétition personnalisés pour booster les résultats scolaires de votre enfant, dispensés par des enseignants qualifiés.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-md font-bold text-center transition duration-300">Inscription Gratuite</a>
+                        <a href="#methodes" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-md font-bold text-center transition duration-300">Nos Méthodes</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="./photo/enseignantprof.png" alt="Étudiants en classe" class="rounded-lg shadow-2xl w-full h-auto">
+                    <div class="absolute -bottom-5 -right-5 bg-yellow-400 text-gray-900 p-4 rounded-lg shadow-lg floating-btn">
+                        <div class="text-center">
+                            <p class="font-bold text-lg">97%</p>
+                            <p class="text-sm">de réussite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-blue-600">5+</p>
+                    <p class="text-gray-600">Années d'expérience</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-blue-600">20+</p>
+                    <p class="text-gray-600">Élèves accompagnés</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-blue-600">7+</p>
+                    <p class="text-gray-600">Enseignants qualifiés</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-blue-600">15</p>
+                    <p class="text-gray-600">Matières enseignées</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Services de Répétition</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Un accompagnement scolaire sur mesure pour tous les niveaux, du primaire au lycée.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subject-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-book text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Cours Individuels</h3>
+                        </div>
+
+
+                        <p class="text-gray-600 mb-4">Séances personnalisées en tête-à-tête avec un répétiteur dédié, adaptées au rythme et besoins spécifiques de l'élève.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Programme sur mesure</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Flexibilité horaire</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Suivi individualisé</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subject-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Cours en Groupe</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sessions interactives en petits groupes homogènes (4-6 élèves) pour favoriser l'émulation et les échanges constructifs.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Dynamique de groupe</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tarif plus accessible</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Apprentissage collaboratif</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden subject-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-laptop text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Cours en Ligne</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Plateforme interactive pour des cours à distance avec outils numériques performants et ressources pédagogiques en ligne.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Accessible partout</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Enregistrements disponibles</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Outils interactifs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matières Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Matières Enseignées</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Nous couvrons l'ensemble des disciplines scolaires avec des spécialistes pour chaque matière.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+
+
+                <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-square-root-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Mathématiques</h3>
+                    <p class="text-gray-600 text-sm">Primaire à Terminale</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-flask text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Sciences Physiques</h3>
+                    <p class="text-gray-600 text-sm">Collège et Lycée</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-dna text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Sciences de la Vie</h3>
+                    <p class="text-gray-600 text-sm">Primaire à Terminale</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-language text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Français</h3>
+                    <p class="text-gray-600 text-sm">Tous niveaux</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe-africa text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Anglais</h3>
+                    <p class="text-gray-600 text-sm">Tous niveaux</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe-africa text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Allemand</h3>
+                    <p class="text-gray-600 text-sm">Classe de langue</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-landmark text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Histoire-Géo</h3>
+                    <p class="text-gray-600 text-sm">Collège et Lycée</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Philosophie</h3>
+                    <p class="text-gray-600 text-sm">Collège et Lycée</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50 transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-solid fa-flask-vial text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Chimie</h3>
+                    <p class="text-gray-600 text-sm">Collège et Lycée</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Méthodes Section -->
+    <section id="methodes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="./photo/etudiantprof.png" alt="Méthodes pédagogiques" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Approche Pédagogique</h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Diagnostic Initial</h3>
+                                <p class="mt-2 text-gray-600">Évaluation précise des lacunes et points forts de l'élève pour établir un programme personnalisé.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Plan d'Action</h3>
+                                <p class="mt-2 text-gray-600">Définition d'objectifs clairs et progressifs avec des échéances mesurables.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Pédagogie Active</h3>
+                                <p class="mt-2 text-gray-600">Méthodes interactives qui placent l'élève au centre de son apprentissage.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Suivi Régulier</h3>
+                                <p class="mt-2 text-gray-600">Bilans périodiques avec les parents pour mesurer les progrès et ajuster si nécessaire.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enseignants Section -->
+    <section id="enseignants" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Enseignants Qualifiés</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Une équipe pédagogique rigoureusement sélectionnée pour leur expertise et leur passion de l'enseignement.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Enseignant 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md teacher-card transition duration-300">
+                    <img src="./photo/cabrel-prof.jpg" alt="Professeur Mathématiques" class="w-full h-70 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Mr Kueda Brice Cabrel</h3>
+                        <p class="text-blue-600 font-medium mb-4">Mathématiques & Physique & Chimie</p>
+                        <p class="text-gray-600 mb-4">Expert en Mathématiques avec 5 ans d'expérience dans l'enseignement primaire et secondaire.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Master en Physique</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">CAPES</span>
+                            <span class="bg-yellow-300 text-yellow-600 text-xs px-2 py-1 rounded">Promoteur du centre</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enseignant 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md teacher-card transition duration-300">
+                    <img src="./photo/philo-prof.jpg" alt="Professeur philo-prof" class="w-full h-70 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Mme Essombe Jeanne</h3>
+                        <p class="text-blue-600 font-medium mb-4">Philosophie</p>
+                        <p class="text-gray-600 mb-4">professeure de lycée d'Akwa-Nord, spécialiste de la méthodologie et de la dissertation.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Agrégée</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Littérature</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Enseignant 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md teacher-card transition duration-300">
+                    <img src="./photo/prof-anglais.jpg" alt="Professeur Anglais" class="w-full h-70 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Mr Zamgmo Jordan Landry</h3>
+                        <p class="text-blue-600 font-medium mb-4">Encardreur Anglais</p>
+                        <p class="text-gray-600 mb-4">Encardreur-chercheur, spécialiste de la méthodologie, conjugaison, et de la dissertation.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">BAC+5</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Pédagogue</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Enseignant 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md teacher-card transition duration-300">
+                    <img src="./photo/prof.jpg" alt="Professeur prof-francais" class="w-full h-70 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Mr Medounga Olivier</h3>
+                        <p class="text-blue-600 font-medium mb-4">Français</p>
+                        <p class="text-gray-600 mb-4">professeure de lycée, spécialiste de la méthodologie et de la dissertation.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Agrégée</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Littérature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://wa.me/237672422334?text=Bonjour,%20je%20suis%20très%20intéressé(e)%20par%20les%20cours%20de%20soutien%20(répétition).%20J'aimerais%20connaitre%20les%20modalités%20d'inscription%20et%20ce%20qu'elle%20inclut.%20Merci." class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                    Rencontrer notre équipe
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Témoignages</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ce que disent les parents et élèves qui nous font confiance.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="./photo/sandra.jpg" alt="Parent témoin">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Mme Sandrine</h4>
+                            <p class="text-gray-600">Mère de Alan, Terminale C</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Grâce aux cours de mathématiques avec Mr Kueda, mon fils a gagné 4 points de moyenne en un trimestre. Sa méthodologie est exceptionnelle et Alane a retrouvé confiance en lui ce qui lui a permis d'avoir son bac. Merci au centre La Réussite"</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="./photo/maëva.jpg" alt="Parent témoin">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Maëva</h4>
+                            <p class="text-gray-600">3ème</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Les cours en groupe de français ont transformé mes résultats. Je suis passée de 09/20 à 15/20 en dissertation. L'approche interactive est très motivante. Sans oublier les cours d'Anglais. Merci La Réussite."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Témoignage 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="./photo/mbella.jpg" alt="Élève témoin">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Alice</h4>
+                            <p class="text-gray-600">Terminale D, De La Salle</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Les cours de soutien avec le centre La Réussite m'ont permis d'obtenir mon Probatoire D. En effet, j'avais des difficultés dans certaines matières, mais grâce au courage et à la détermination de nos différents encadreurs, j'ai pu atteindre cet objectif."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Tarifs Compétitifs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Des formules adaptées à tous les budgets pour un accompagnement de qualité.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Formule 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 text-center">Découverte</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">5 000 FCFA</span>
+                            <span class="text-gray-600">/ séance</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cours individuels</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 1h30 par séance</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bilan initial</li>
+                            <li class="flex items-center"><i class="fas fa-times text-red-500 mr-2"></i> Suivi entre séances</li>
+                            <li class="flex items-center"><i class="fas fa-times text-red-500 mr-2"></i> Ressources en ligne</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="https://wa.me/237672422334?text=Bonjour,%20je%20suis%20très%20intéressé(e)%20par%20la%20formule%20de%20cours%20de%20soutien%20à%205%20000%20FCFA%20(répétition).%20J'aimerais%20connaitre%20les%20modalités%20d'inscription%20et%20ce%20qu'elle%20inclut.%20Merci." class="inline-flex items-center px-4 py-2 border border-blue-600 text-base font-medium rounded-md text-blue-600 hover:bg-blue-50 transition duration-300">
+                                Essayer maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formule 2 (Mise en avant) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-blue-600 transform scale-105 z-10">
+                    <div class="bg-blue-600 p-3 text-center text-white font-bold">
+                        POPULAIRE
+                    </div>
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 text-center">Progression</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">40 000 FCFA</span>
+                            <span class="text-gray-600">/ mois</span>
+                            <p class="text-sm text-gray-500 mt-1">(8 séances - 5 000 FCFA/séance)</p>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cours individuels ou en groupe</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 2 séances/semaine</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bilan complet</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Suivi entre séances</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Accès ressources en ligne</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="https://wa.me/237672422334?text=Bonjour,%20je%20suis%20très%20intéressé(e)%20par%20la%20formule%20de%20cours%20de%20soutien%20à%2040%20000%20FCFA%20(répétition).%20J'aimerais%20connaitre%20les%20modalités%20d'inscription%20et%20ce%20qu'elle%20inclut.%20Merci." class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                                S'inscrire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formule 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 border-b border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 text-center">Excellence</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">70 000 FCFA</span>
+                            <span class="text-gray-600">/ mois</span>
+                            <p class="text-sm text-gray-500 mt-1">(12 séances - 5 800 FCFA/séance)</p>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cours individuels premium</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 3 séances/semaine</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bilan complet + plan personnalisé</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Suivi intensif</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Toutes ressources + examens blancs</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="https://wa.me/237672422334?text=Bonjour,%20je%20suis%20très%20intéressé(e)%20par%20la%20formule%20de%20cours%20de%20soutien%20à%2070%20000%20FCFA%20(répétition).%20J'aimerais%20connaitre%20les%20modalités%20d'inscription%20et%20ce%20qu'elle%20inclut.%20Merci." class="inline-flex items-center px-4 py-2 border border-blue-600 text-base font-medium rounded-md text-blue-600 hover:bg-blue-50 transition duration-300">
+                                Nous contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-lg p-6 text-center">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Tarifs de groupe disponibles</h3>
+                <p class="text-gray-600 mb-4">Réductions pour fratries ou groupes constitués (amis, camarades de classe).</p>
+                <a href="https://wa.me/237672422334?text=Bonjour,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20cours%20de%20répétition%20.%20Pourriez-vous%20m'en%20dire%20plus%20sur%20les%20matières%20et%20les%20tarifs%3F%20Merci." class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                    Demander un devis personnalisé
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Questions Fréquentes</h2>
+                <p class="text-xl text-gray-600">Trouvez rapidement des réponses à vos interrogations.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Comment se déroule le premier cours ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600 border-t border-gray-200">
+                        <p>Le premier cours est une séance de diagnostic gratuite d'une heure. L'enseignant évalue le niveau de l'élève, identifie ses difficultés et discute avec les parents pour établir un plan d'action personnalisé. C'est aussi l'occasion de faire connaissance et de vérifier que le "fit" pédagogique est bon.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Quelle est votre politique d'annulation ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600 border-t border-gray-200">
+                        <p>Vous pouvez annuler ou reporter un cours sans frais jusqu'à 24h à l'avance. En cas d'annulation tardive (moins de 24h), la séance est due à 50%. Pour les cas de force majeure (maladie avec certificat médical), nous trouvons toujours une solution équitable.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Proposez-vous des stages intensifs pendant les vacances ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600 border-t border-gray-200">
+                        <p>Oui, nous organisons des stages intensifs pendant toutes les vacances scolaires (petites et grandes vacances). Ces stages permettent de combler des lacunes importantes ou de se préparer à des examens. Nous proposons des formules à la semaine (15h de cours) ou sur deux semaines (30h). Contactez-nous pour connaître les dates et tarifs des prochains stages.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Comment sont sélectionnés vos enseignants ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600 border-t border-gray-200">
+                        <p>Nos enseignants passent par un processus de recrutement rigoureux : vérification des diplômes, tests pédagogiques, entretien approfondi et cours d'essai.Nous privilégions les enseignants en activité ou récemment retraités de l'Éducation Nationale, ainsi que les universitaires spécialistes de leur discipline. Tous nos enseignants suivent une formation interne à nos méthodes pédagogiques.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Quels sont vos horaires d'ouverture ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600 border-t border-gray-200">
+                        <p>Nos bureaux sont ouverts du lundi au vendredi de 8h à 18h, et le samedi de 9h à 13h. Les cours peuvent avoir lieu tous les jours de la semaine (y compris le week-end) entre 7h et 20h, selon la disponibilité des enseignants et des élèves. Pour les cours en ligne, certains enseignants proposent également des créaux en soirée jusqu'à 22h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Prêt à booster les résultats scolaires de votre enfant ?</h2>
+                    <p class="text-xl mb-8">Contactez-nous pour une évaluation gratuite et sans engagement.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium">Nos bureaux</h3>
+                                <p class="mt-1">Rue 543E, Quartier Bonamoussadi<br>Douala, Cameroun</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone-alt text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium">Téléphone</h3>
+                                <p class="mt-1">+237 6 72 42 23 34<br>+237 6 72 42 23 34</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium">Email</h3>
+                                <p class="mt-1">contact@corrigetescours.cm<br>info@corrigetescours.cm</p>
+                            </div>
+                        </div> -->
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium">Horaires</h3>
+                                <p class="mt-1">Lundi-Vendredi: 8h-18h<br>Samedi: 9h-13h</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-white rounded-lg shadow-xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet *</label>
+                            <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                <option value="cours">Demande de cours</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="consent" name="consent" type="checkbox" required class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="consent" class="font-medium text-gray-700">J'accepte la politique de confidentialité *</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="whatsappSubmit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                            Envoyer le message sur WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-400 mr-2"></i>
+                        Corrige tes cours
+                    </h3>
+
+
+                    <p class="text-gray-400">Leader des cours de soutien scolaire au Cameroun depuis 2010. Excellence académique, résultats garantis.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Nos Services</a></li>
+                        <li><a href="#methodes" class="text-gray-400 hover:text-white">Méthodes</a></li>
+                        <li><a href="#enseignants" class="text-gray-400 hover:text-white">Enseignants</a></li>
+                        <li><a href="#tarifs" class="text-gray-400 hover:text-white">Tarifs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Matières</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mathématiques</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Physique-Chimie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">SVT</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Français</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Anglais</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Philosophie</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos conseils pédagogiques et offres spéciales.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Corrige tes cours. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/237672422334" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>    
+
+    <!-- Back to Top Button -->
+
+
+<button id="backToTop" class="fixed bottom-6 left-6 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300 z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Merci ${name} pour votre message concernant "${subject}". Nous vous répondrons à l'adresse ${phone} sur whatsapp très rapidement.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Soumission du formulaire via WhatsApp
+        document.getElementById('whatsappSubmit').addEventListener('click', function() {
+            const form = document.getElementById('contactForm');
+
+            // Validation simple des champs requis
+            if (!form.reportValidity()) {
+                return; // Arrête si les champs requis ne sont pas remplis
+            }
+
+            // 1. Récupérez les valeurs des champs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = form.elements['subject'].options[form.elements['subject'].selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            // 2. Définissez le numéro de téléphone WhatsApp (à modifier)
+            const phoneNumber = '237672422334'; // REMPLACER PAR VOTRE NUMÉRO (avec code pays, sans +, ex: 33612345678)
+
+            // 3. Créez le message pré-rempli
+            const prefilledMessage = 
+                `Bonjour, je souhaite vous contacter au sujet de : *${subject}*.\n\n` +
+                `**Détails du contact :**\n` +
+                `Nom : ${name}\n` +
+                `Email : ${email}\n` +
+                (phone ? `Téléphone : ${phone}\n\n` : '\n') +
+                `**Mon message :**\n` +
+                `${message}`;
+
+            // 4. Encodez le message pour l'URL
+            const encodedMessage = encodeURIComponent(prefilledMessage);
+
+            // 5. Construisez le lien WhatsApp
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // 6. Redirigez l'utilisateur
+            window.open(whatsappLink, '_blank');
+        });
+
+    </script>
+</body>
+</html>
